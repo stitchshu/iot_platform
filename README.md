@@ -27,12 +27,16 @@
 goctl api new 服务名称
 # 1.创建user服务
 goctl api new user
+# 2.创建 admin服务
+goctl api new admin
 ```
 + 生成服务代码
 ```shell
 goctl api go -api 服务名称.api -dir . -style go_zero
 # 1.生成user服务代码
 goctl api go -api user.api -dir . -style go_zero
+# 2.生成admin服务代码
+goctl api go -api admin.api -dir . -style go_zero
 ```
 
 + 启动服务
@@ -41,4 +45,6 @@ goctl api go -api user.api -dir . -style go_zero
 go run 服务名称.go -f 配置文件地址
 # 1.启动user服务
 go run user.go -f etc/user-api.yaml
+# 2.启动admin服务
+go run admin.go -f etc/admin-api.yaml
 ```
